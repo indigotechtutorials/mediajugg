@@ -8,7 +8,7 @@ class MediaJugg
     end
 
     def video(url)
-      dlp_runner(url, 'f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]', '-S', 'vcodec:h264')
+      dlp_runner(url, '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]', '-S', 'vcodec:h264')
     end
   end
 end
