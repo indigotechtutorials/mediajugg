@@ -6,13 +6,13 @@ require 'media_jugg'
 class MediaJuggCLI < Thor
   desc "audio URL", "downloads an audio from the matching source"
   def audio(url)
-    puts "Downloading your audio now #{url}"
+    puts "🔊 Downloading your audio now #{url}"
     MediaJugg.audio(url)
   end
 
   desc "video URL", "downloads a video from the matching source"
   def video(url)
-    puts "Downloading your video now #{url}"
+    puts "📼 Downloading your video now #{url}"
     MediaJugg.video(url)
   end
 end
