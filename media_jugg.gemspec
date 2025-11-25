@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "media-jugg"
-  s.version     = "0.0.3"
+  s.version     = "0.0.5"
   s.summary     = "Download audios/videos from any sources"
   s.description = "A simplified wrapper around the yt-dlp library and setup for Ruby"
   s.authors     = ["Indigo Tech"]
