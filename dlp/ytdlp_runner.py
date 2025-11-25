@@ -1,5 +1,5 @@
-import sys
-sys.path.insert(0, 'dlp/yt-dlp')
+import sys, os
+sys.path.append(os.path.join(sys.path[0], 'yt-dlp'))
 import yt_dlp
 import argparse
 
