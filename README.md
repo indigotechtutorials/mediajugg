@@ -24,6 +24,15 @@ Run this command anywhere in the terminal. Make sure to wrap the url in strings 
 
 `mediajugg video 'video_url'`
 
+### Common issues
+
+#### 1. zsh: no matches found
+This is because you passed the url without wrapping it in quotes so terminal is trying to read the special url characters as commands. fix this by wrapping the url in quotes.
+
+❌ mediajugg video http://videourl.com 
+✅ mediajugg video 'http://videourl.com'
+
+Can be either single quote ' or double quotes "
 
 ### Reasons for building
 
