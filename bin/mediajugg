@@ -15,6 +15,12 @@ class MediaJuggCLI < Thor
     puts "📼 Downloading your video now #{url}"
     MediaJugg.video(url)
   end
+
+  desc "subtitles URL", "downloads the subtitles from matching source"
+  def subtitles(url)
+    puts "📝 Downloading subtitles for video: #{url}"
+    MediaJugg.subtitles(url)
+  end
 end
 
 MediaJuggCLI.start(ARGV)
