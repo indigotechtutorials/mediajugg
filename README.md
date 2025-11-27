@@ -24,6 +24,26 @@ Run this command anywhere in the terminal. Make sure to wrap the url in strings 
 
 `mediajugg video 'video_url'`
 
+### Download a subtitles file
+
+`mediajugg subtitles 'video_url'`
+
+### Using in Ruby 
+
+If you want to use this library directly via Ruby than you can call the `MediaJugg` class directly instead of using the command line exe.
+
+This would look like
+
+```rb
+require 'media-jugg'
+MediaJugg.video('video_url')
+```
+
+Which will automatically download the video file
+
+TODO: We should allow passing a block to the command to open the final file as a local file. And also allow specifying the path to the downloaded file. This for the CLI and ruby API.
+
+
 ### Common issues
 
 #### 1. zsh: no matches found
@@ -33,6 +53,15 @@ This is because you passed the url without wrapping it in quotes so terminal is 
 ✅ mediajugg video 'http://videourl.com'
 
 Can be either single quote ' or double quotes "
+
+### How to test locally
+
+Run this command to run script locally and it will include all needed files with the -I lib part
+
+```sh
+ruby -I lib ./bin/mediajugg audio 'https://youtu.be/ygpZNRzs-Y0?si=StlZyGMyCUjowTIa'
+```
+
 
 ### Reasons for building
 
@@ -57,11 +86,3 @@ mediajugg yt-url
 ```
 
 Potentially the library could detect what source its using from the url and apply appropriate settings.
-
-### How to test locally
-
-Run this command to run script locally and it will include all needed files with the -I lib part
-
-```sh
-ruby -I lib ./bin/mediajugg audio 'https://youtu.be/ygpZNRzs-Y0?si=StlZyGMyCUjowTIa'
-```
