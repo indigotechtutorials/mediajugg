@@ -2,7 +2,8 @@ import sys, os
 sys.path.append(os.path.join(sys.path[0], 'yt-dlp'))
 import yt_dlp
 import argparse
-
+import subprocess
+subprocess.run(["yt-dlp", "-U"]) 
 
 youtube_url = sys.argv[1]
 yt_opts = yt_dlp.parse_options(sys.argv[2:]).ydl_opts
