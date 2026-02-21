@@ -10,9 +10,9 @@ class MediaJuggCLI < Thor
     MediaJugg.audio(url)
   end
 
-  desc "best_audio URL", "Downloads the best audio ( as m4a )"
+  desc "best_audio URL", "Downloads the best audio ( returns a few files )"
   def best_audio(url)
-    "🎶 Downloading best audio as m4a: #{url}"
+    "🎶 Downloading best audio: #{url}"
     MediaJugg.best_audio(url)
   end
 

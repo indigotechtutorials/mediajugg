@@ -8,7 +8,7 @@ class MediaJugg
     end
 
     def best_audio(url)
-      dlp_runner(url, '-x', 'bestaudio[ext=m4a]')
+      dlp_runner(url, '-x', 'bestaudio[ext=m4a]', 'bestaudio[ext=webm]')
     end
 
     def video(url)
